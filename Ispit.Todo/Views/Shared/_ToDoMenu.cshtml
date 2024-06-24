@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Ispit.Todo.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-controller="Todolist" asp-action="Index">ToDo Lists</a>
+    </li>
+}
